@@ -83,11 +83,18 @@ count = 1
 noofthreds = 0
 maxnoofthreats = int(input("No of threats : ") or "3")
 
+startFrom = int(input("Start from(you already downloaded fes videos) : ") or "1")
+
 for video in p.videos:    
-    noofthreds = noofthreds + 1     
+         
 
     try:
-        _thread.start_new_thread( downloadVideo, (video, count, ) )        
+        if(count < startFrom):
+            count = count + 1
+            continue
+        _thread.start_new_thread( downloadVideo, (video, count, ) )
+        noofthreds = noofthreds + 1
+        
     except:
         print("Error: unable to start thread")
 
