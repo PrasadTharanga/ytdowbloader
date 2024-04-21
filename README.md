@@ -1,5 +1,5 @@
-YouTube Downloader Python
+YouTube playlist Downloader in Python
 <hr>
 1. install pytube using "pip install pytube" <br>
-2. playlist download : python run.py
+2. playlist download: python run.py
 
